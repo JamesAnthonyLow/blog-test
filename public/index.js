@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function(event){
-  var select = function(str){ return document.getElementById(str); }
+var select = function(str){ return document.getElementById(str); }
+var addLineNumbers = function(){
   var nBar = select("numbers")
 
   nBar.innerHTML += '<div id="first-num">0</div>'
@@ -9,5 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event){
   for(var i=1; i<barHeight; i++){
     nBar.innerHTML += "<div>" + i + "</div>"
   }
+}
+document.addEventListener("DOMContentLoaded", function(event){
+  addLineNumbers();
 });
 
