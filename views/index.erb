@@ -14,8 +14,9 @@
       <div id="code-body">
         <pre><code class="code-font">    #!/MyBlog/By JamesAnthonyLow
     {
-      "Linked Lists" : "Monday, September 12, 2016",
-      "Trees" :  "Tuesday, September 13, 2016"',
+<% @entries.each do |e| %>
+      "<%= e.name %>" : "<%= e.date %>",
+<% end %>
     }
 
     {

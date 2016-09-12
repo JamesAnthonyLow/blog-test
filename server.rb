@@ -1,8 +1,7 @@
+require_relative "models/entry"
 require 'sinatra'
 
-entry_names = Dir["public/entries/*"].map {|d| File.basename(d)}
-
-p entry_names
 get '/' do
+  @entries = Entry.parse("public/entries")
   erb :index
 end
