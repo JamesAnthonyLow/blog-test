@@ -6,8 +6,21 @@ body {
   font-family: "Lucida Console", Monaco, monospace;
 }
 
+.entries {
+  text-decoration: none;
+  color: black;
+}
+
+.entries:hover {
+  color: red;
+}
+
 .container {
   position: relative;
+}
+
+.code-body {
+  margin-left: 5.6%;
 }
 
 .numbers {
@@ -21,6 +34,6 @@ body {
 
 @media (min-width: 1200px) {
   .code-font {
-    font-size: 2em;
+    font-size: 24px;
   }
 }

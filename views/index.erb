@@ -11,21 +11,21 @@
     <div class="container">
       <div id="numbers" class="numbers code-font">
       </div>
-      <div id="code-body">
-        <pre><code class="code-font">    #!/MyBlog/By JamesAnthonyLow
+      <div id="code-body" class="code-body">
+        <pre><code class="code-font">#!/MyBlog/By JamesAnthonyLow
 
-    {
+#Posts
+{ 
 <% @entries.each do |e| %>
-      "<%= e.name %>" : "<%= e.date %>",
+  "<a class="code-font entries" href="#"><%= e.name %></a>" : "<a class="code-font entries" href="#"><%= e.date %></a>",
 <% end %>
-    }
+}
 
-    {
-      "Twitter": @JamesAnthonyLow
-    }
+#Social
+{ 
+  ["<a class="code-font entries" href="https://twitter.com/JamesAnthonyLow">Twitter</a>", "<a class="code-font entries" href="https://linkedin.com/in/JamesAnthonyLow">LinkedIn</a>", "<a class="code-font entries" href="https://github.com/JamesAnthonyLow">GitHub</a>"]
+}
        </code></pre>
-
-
       </div>
     </div>
   </body>
