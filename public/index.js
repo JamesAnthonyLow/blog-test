@@ -18,17 +18,24 @@ var getBarHeight = function(){
 var addLineNumbers = function(){
   for(var i=0; i<getBarHeight(); i++)
   select( "numbers" ).innerHTML += 
-    "<div id=\"box-"+i+"\" class=\"num\">"+i+"</div>";
+    "<div class=\"num\">"+i+"</div>";
 }
 
 var colorNumber = function( ev ){
+  var value;
   var num = Math.floor( ev.clientY/fontHeight() );
   var all_nums = document.getElementsByClassName( "num" );
   if( num <= getBarHeight() ){
     for(var i=0; i<all_nums.length; i++){
-      all_nums[i].innerHTML = Math.abs( i-num );
+      all_nums[i].classList.remove( "current-line" );
+      if( num == i ){
+        value = i;
+        all_nums[i].classList.add( "current-line" );
+      } else {
+        value = Math.abs( i - num );
+      }
+      all_nums[i].innerHTML = value;
     }
-    var line = select( "box-"+String( num ) );
   }
 }
 
