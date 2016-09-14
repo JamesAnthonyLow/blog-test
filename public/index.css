@@ -32,6 +32,10 @@ body {
   z-index: -1;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 1200px) {
   .code-font {
     font-size: 24px;

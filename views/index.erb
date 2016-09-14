@@ -13,19 +13,17 @@
       </div>
       <div id="code-body" class="code-body">
         <pre><code class="code-font">#!/MyBlog/By JamesAnthonyLow
-
-#Posts
+<div id="posts">
+<span id="post-title" class="hidden">#Posts</span>
 { 
 <% @entries.each do |e| %>
   "<a class="code-font entries" href="#"><%= e.name %></a>" : "<a class="code-font entries" href="#"><%= e.date %></a>",
 <% end %>
-}
-
-#Social
+}</div><div id="social">
+<span id="social-title" class="hidden">#Social</span>
 { 
   ["<a class="code-font entries" href="https://twitter.com/JamesAnthonyLow">Twitter</a>", "<a class="code-font entries" href="https://linkedin.com/in/JamesAnthonyLow">LinkedIn</a>", "<a class="code-font entries" href="https://github.com/JamesAnthonyLow">GitHub</a>"]
-}
-       </code></pre>
+}</div></code></pre>
       </div>
     </div>
   </body>
